@@ -42,7 +42,14 @@ public class NaiveBayesModel {
 
             System.out.printf("Model saved to %s%n", outputPath);
             System.out.printf("Training runtime: %d ms%n", buildMillis);
-            System.out.printf("Accuracy on test set: %.2f%%%n", evaluation.pctCorrect());
+            System.out.printf("Accuracy on test set: %.5f%%%n", evaluation.pctCorrect());
+            System.out.println("\nConfusion Matrix:");
+            System.out.println(evaluation.toMatrixString());
+            System.out.println("\nDetailed Accuracy By Class:");
+            System.out.println(evaluation.toClassDetailsString());
+            System.out.println("\nSummary:");
+            System.out.println(evaluation.toSummaryString());
+
         } catch (Exception e) {
             System.err.printf("Failed to build NaiveBayes model: %s%n", e.getMessage());
             System.exit(2);

@@ -29,7 +29,7 @@ code/
 Open Terminal or PowerShell and navigate to the project directory:
 ```powershell
 # If you're in the project root directory
-cd GroupD_Names\code
+cd GroupD_DOT\code
 
 # Or if you're already in the code directory, you can skip this step
 ```
@@ -127,7 +127,7 @@ After running, you can verify:
 
 ```powershell
 # Navigate to project directory (from project root)
-cd GroupD_Names\code
+cd GroupD_DOT\code
 
 # Compile
 javac -cp ".;src/lib/weka.jar" -d out src\*.java
